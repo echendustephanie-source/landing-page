@@ -114,7 +114,7 @@ main {
 /* HERO SLIDER CONTAINER */
 .hero-slider {
     position: relative;
-     display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 75vh;
@@ -130,7 +130,7 @@ main {
     border-radius: 1rem;
     opacity: 0;
     animation: heroFade 12s infinite;
-     filter: brightness(0.7) contrast(1.1);
+    filter: brightness(0.7) contrast(1.1);
 }
 
 /* INDIVIDUAL SLIDE TIMINGS */
@@ -152,18 +152,22 @@ main {
         opacity: 0;
         transform: scale(1.05) translateX(20px);
     }
+
     10% {
         opacity: 1;
         transform: scale(1) translateX(0);
     }
+
     30% {
         opacity: 1;
         transform: scale(1) translateX(0);
     }
+
     40% {
         opacity: 0;
         transform: scale(1.05) translateX(-20px);
     }
+
     100% {
         opacity: 0;
     }
@@ -873,7 +877,7 @@ footer {
     .hero-slider {
         height: 45vh;
         padding-top: 1rem;
-        
+
     }
 
     .hero-slider img {
@@ -953,6 +957,12 @@ footer {
         min-width: 75%;
         flex-shrink: 0;
         scroll-snap-align: center;
+        transition: none;
+        transform: none;
+    }
+
+    .service-card:hover {
+        transform: none;
     }
 
     .service-card:last-child {
@@ -1044,8 +1054,13 @@ footer {
         padding: 1.5rem;
         flex-shrink: 0;
         scroll-snap-align: center;
+        transform: none;
+        transition: none;
     }
 
+    .metric-card:hover {
+        transform: none;
+    }
 
     .reviews-grid {
         display: flex;
@@ -1065,6 +1080,12 @@ footer {
         padding: 1.2rem;
         flex-shrink: 0;
         scroll-snap-align: center;
+        transition: none;
+        transform: none;
+    }
+
+    .review-card:hover {
+        transform: none;
     }
 
     .review-card p,
@@ -1152,12 +1173,12 @@ footer {
     /* NAVIGATION */
     nav {
         padding: 0.8rem;
-        gap: 3rem; 
+        gap: 3rem;
     }
 
     .nav-links,
     .auth-buttons {
-        width: 160px;   
+        width: 160px;
         right: 10px;
         top: 70px;
     }
@@ -1186,7 +1207,7 @@ footer {
 
     /* SERVICES CARDS */
     .service-card {
-        min-width: 85%; 
+        min-width: 85%;
     }
 
     .priority h3 {
@@ -1201,7 +1222,7 @@ footer {
 
     /* WHY CHOOSE US */
     .why-img img {
-        height: 330px; 
+        height: 330px;
     }
 
     .why-text h3 {
