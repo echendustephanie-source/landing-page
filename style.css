@@ -968,9 +968,20 @@ footer {
     .service-card:last-child {
         grid-column: unset;
         justify-self: unset;
-        width: 90%;
-        max-width: none;
+        width:90%;
+        max-width:none;
     }
+
+   .service-card p {
+        font-size: 0.6rem;       /* smaller font for mobile */
+        word-wrap: break-word;   /* forces long words to break */
+        white-space: normal;     /* ensures text can wrap */
+        line-height: 1.2rem;     /* optional, makes it more readable */
+    }
+
+
+
+
 
 
     /* WHY CHOOSE US */
