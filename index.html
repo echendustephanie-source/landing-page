@@ -50,8 +50,8 @@
         <!-- <img src="./images/hero-img.jpg" alt="a docctor speaking with a patient">
         </div> -->
         <img src="./images/hero-img.jpg" alt="Doctor speaking with a patient">
-        <img src="./images/hero-img2.jpg" alt="Medical consultation scene">
-        <img src="./images/hero-img3.jpg" alt="Healthcare professional with patient">
+        <img src="/hero-img2.jpg" alt="Medical consultation scene">
+        <img src="/hero-img3.jpg" alt="Healthcare professional with patient">
 
 
 
@@ -406,6 +406,87 @@
         </div>
       </div>
   </footer>
+
+
+
+
+    <!-- Chat Bot Button -->
+  <div id="chatBot" class="chat-bot">
+    <img src="./icons/doctor-icon.png" alt="chat icon" width="32">
+  </div>
+
+  <div id="chatPopup" class="chat-popup">
+    <div class="chat-header">
+      Hospital Info
+      <span id="closeChat" class="close">×</span>
+    </div>
+
+    <div class="chat-body" id="chatBody">
+
+    </div>
+  </div>
+
+
+  <script>
+    const chatBtn = document.getElementById("chatBot");
+    const chatPopup = document.getElementById("chatPopup");
+    const closeChat = document.getElementById("closeChat");
+    const chatBody = document.getElementById("chatBody");
+
+    chatBtn.addEventListener("click", () => {
+      chatPopup.style.display = "flex";
+      loadTyping();
+      setTimeout(loadBotMessage, 1200);
+    });
+
+    closeChat.addEventListener("click", () => {
+      chatPopup.style.display = "none";
+      chatBody.innerHTML = "";
+    });
+
+    function loadTyping() {
+      chatBody.innerHTML = `
+      <div class="message bot">
+        <div class="bot-avatar">👨🏽‍⚕️</div>
+        <div>
+          <span class="typing"></span>
+          <span class="typing"></span>
+          <span class="typing"></span>
+        </div>
+      </div>
+    `;
+    }
+
+    function loadBotMessage() {
+      chatBody.innerHTML = `
+      <div class="message bot">
+        <div class="bot-avatar">👨🏽‍⚕️</div>
+        <div>👋 Hello! Here is our hospital contact information:</div>
+      </div>
+
+      <div class="message bot">
+        <div class="bot-avatar">👨🏽‍⚕️</div>
+        <div>📍 <b>Address:</b> 123 Health Avenue, City Center</div>
+      </div>
+
+      <div class="message bot">
+        <div class="bot-avatar">👨🏽‍⚕️</div>
+        <div>📞 <b>Phone:</b> +234 801 234 5678</div>
+      </div>
+
+      <div class="message bot">
+        <div class="bot-avatar">👨🏽‍⚕️</div>
+        <div>✉ <b>Email:</b> support@wecare.com</div>
+      </div>
+
+      <div class="chat-options">
+        <button onclick="window.open('tel:+2348012345678')">📞 Call Now</button>
+        <button onclick="window.open('mailto:support@wecare.com')">✉ Send Email</button>
+        <button onclick="window.open('https://maps.google.com')">📍 View On Map</button>
+      </div>
+    `;
+    }
+  </script>
 
 
 </body>

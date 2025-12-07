@@ -114,7 +114,7 @@ main {
 /* HERO SLIDER CONTAINER */
 .hero-slider {
     position: relative;
-    display: flex;
+     display: flex;
     justify-content: center;
     align-items: center;
     height: 75vh;
@@ -130,7 +130,7 @@ main {
     border-radius: 1rem;
     opacity: 0;
     animation: heroFade 12s infinite;
-    filter: brightness(0.7) contrast(1.1);
+     filter: brightness(0.7) contrast(1.1);
 }
 
 /* INDIVIDUAL SLIDE TIMINGS */
@@ -152,22 +152,18 @@ main {
         opacity: 0;
         transform: scale(1.05) translateX(20px);
     }
-
     10% {
         opacity: 1;
         transform: scale(1) translateX(0);
     }
-
     30% {
         opacity: 1;
         transform: scale(1) translateX(0);
     }
-
     40% {
         opacity: 0;
         transform: scale(1.05) translateX(-20px);
     }
-
     100% {
         opacity: 0;
     }
@@ -731,7 +727,151 @@ footer {
     border-radius: 0.1875rem;
 }
 
+/* ============================
+   UPGRADED CHATBOT (WeCare Styled)
+============================ */
 
+:root {
+  --wc-blue:  #094964;
+  --wc-blue-dark:  #0f6a91;
+  --wc-light: #e9f2ff;
+}
+
+.chat-bot {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: var(--wc-blue);
+  color: white;
+  width: 65px;
+  height: 65px;
+  font-size: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+.chat-bot:hover {
+  transform: scale(1.12);
+  background: var(--wc-blue-dark);
+}
+
+/* Chat Popup */
+.chat-popup {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  width: 330px;
+  background: white;
+  border-radius: 18px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  overflow: hidden;
+  animation: slideUp 0.35s ease forwards;
+  z-index: 999;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.chat-header {
+  background: var(--wc-blue);
+  color: white;
+  padding: 14px 18px;
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header .close {
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.chat-body {
+  max-height: 350px;
+  overflow-y: auto;
+  padding: 15px;
+  background: #fafcff;
+}
+
+/* Chat Message Styling */
+.message {
+  padding: 12px 15px;
+  background: #f2f3f7;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.45;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.message.bot {
+  background: var(--wc-light);
+  border-left: 4px solid var(--wc-blue);
+}
+
+.bot-avatar {
+  width: 32px;
+  height: 32px;
+  background: var(--wc-blue);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* Typing Animation */
+.typing {
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  background: var(--wc-blue);
+  border-radius: 50%;
+  animation: blink 1.3s infinite;
+  margin-right: 4px;
+}
+
+.typing:nth-child(2) { animation-delay: 0.2s; }
+.typing:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes blink {
+  0% { opacity: .2; }
+  50% { opacity: 1; }
+  100% { opacity: .2; }
+}
+
+/* Button Options */
+.chat-options button {
+  margin: 6px 0;
+  padding: 10px;
+  border: none;
+  background: var(--wc-blue);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+  font-size: 14px;
+}
+
+.chat-options button:hover {
+  background: var(--wc-blue-dark);
+}
 
 
 
@@ -877,7 +1017,7 @@ footer {
     .hero-slider {
         height: 45vh;
         padding-top: 1rem;
-
+        
     }
 
     .hero-slider img {
@@ -957,31 +1097,14 @@ footer {
         min-width: 75%;
         flex-shrink: 0;
         scroll-snap-align: center;
-        transition: none;
-        transform: none;
-    }
-
-    .service-card:hover {
-        transform: none;
     }
 
     .service-card:last-child {
         grid-column: unset;
         justify-self: unset;
-        width:90%;
-        max-width:none;
+        width: 90%;
+        max-width: none;
     }
-
-   .service-card p {
-        font-size: 0.6rem;       /* smaller font for mobile */
-        word-wrap: break-word;   /* forces long words to break */
-        white-space: normal;     /* ensures text can wrap */
-        line-height: 1.2rem;     /* optional, makes it more readable */
-    }
-
-
-
-
 
 
     /* WHY CHOOSE US */
@@ -1065,13 +1188,8 @@ footer {
         padding: 1.5rem;
         flex-shrink: 0;
         scroll-snap-align: center;
-        transform: none;
-        transition: none;
     }
 
-    .metric-card:hover {
-        transform: none;
-    }
 
     .reviews-grid {
         display: flex;
@@ -1091,12 +1209,6 @@ footer {
         padding: 1.2rem;
         flex-shrink: 0;
         scroll-snap-align: center;
-        transition: none;
-        transform: none;
-    }
-
-    .review-card:hover {
-        transform: none;
     }
 
     .review-card p,
@@ -1184,12 +1296,12 @@ footer {
     /* NAVIGATION */
     nav {
         padding: 0.8rem;
-        gap: 3rem;
+        gap: 3rem; 
     }
 
     .nav-links,
     .auth-buttons {
-        width: 160px;
+        width: 160px;   
         right: 10px;
         top: 70px;
     }
@@ -1218,7 +1330,7 @@ footer {
 
     /* SERVICES CARDS */
     .service-card {
-        min-width: 85%;
+        min-width: 85%; 
     }
 
     .priority h3 {
@@ -1233,7 +1345,7 @@ footer {
 
     /* WHY CHOOSE US */
     .why-img img {
-        height: 330px;
+        height: 330px; 
     }
 
     .why-text h3 {
