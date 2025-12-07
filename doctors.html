@@ -1,61 +1,145 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>WeCare list of Doctors</title>
-	<link rel="stylesheet" href="doctors.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeCare Appointment Page</title>
+  <link rel="stylesheet" href="doctors.css">
 </head>
 
 <body>
 
-	<header>
-		<div class="logo">
-			<img src="./images/Vector 4 (1).png" alt="wecare-logo">
-			<h1>WeCare</h1>
-		</div>
-	</header>
+  <header id="#doctors">
+    <div class="logo">
+      <img src="./images/Vector 4 (1).png" alt="wecare-logo">
+      <h1>WeCare</h1>
+    </div>
+  </header>
 
-	<div class="list-container">
+  <div class="appointment-box">
+    <h2>Book Your Appointment</h2>
+    <div class="filter-container">
+      <button class="filter-btn active" data-day="all">All</button>
+      <button class="filter-btn" data-day="monday">Monday</button>
+      <button class="filter-btn" data-day="tuesday">Tuesday</button>
+      <button class="filter-btn" data-day="wednesday">Wednesday</button>
+      <button class="filter-btn" data-day="thursday">Thursday</button>
+      <button class="filter-btn" data-day="friday">Friday</button>
+      <button class="filter-btn" data-day="saturday">Saturday</button>
+      <button class="filter-btn" data-day="sunday">Sunday</button>
+    </div>
 
-		<ul class="doctor-list">
-			<li>
-				<strong>Dr. Brown</strong> - A highly experienced General Physician providing comprehensive primary and
-				preventive care.
-			</li>
-			<li>
-				<strong>Dr. Garcia</strong> - An Orthopedic Specialist focused on bone, joint, and musculoskeletal care.
-			</li>
-			<li>
-				<strong>Dr. Davis</strong> - A skilled Dermatology Consultant specializing in skin health and patient-centered
-				treatment.
-			</li>
-			<li>
-				<strong>Dr. Johnson</strong> - A trusted General Practitioner delivering broad, continuous medical care for all
-				age groups.
-			</li>
-			<li>
-				<strong>Dr. Lee</strong> - An Endocrinology specialist managing hormonal, metabolic, and chronic health
-				conditions.
-			</li>
-			<li>
-				<strong>Dr. Patel</strong> - A Family Medicine Consultant offering holistic, long-term care for individuals and
-				families.
-			</li>
-			<li>
-				<strong>Dr. Smith</strong> - An experienced Cardiologist dedicated to heart health, diagnosis, and preventive
-				cardiology.
-			</li>
-			<li>
-				<strong>Dr. Taylor</strong> - An Obstetrics Consultant supporting women's reproductive health and prenatal care.
-			</li>
-			<li>
-				<strong>Dr. Wilson</strong> - A Neurology Specialist focused on brain, nerve, and neurological disorder
-				management.
-			</li>
-		</ul>
-	</div>
 
+    <div class="doctor-list">
+      <!-- Row 1 -->
+      <div class="doctor-card monday">
+        <div class="card-header">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Brown" class="doctor-img">
+          <h3>Dr. Brown</h3>
+        </div>
+        <p class="specialty">General Physician</p>
+        <p class="availability">Availability: Monday</p>
+        <p class="description">Comprehensive primary and preventive care.</p>
+        <button class="book-btn">Book Now</button>
+      </div>
+
+      <div class="doctor-card tuesday">
+        <div class="card-header">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Garcia" class="doctor-img">
+          <h3>Dr. Garcia</h3>
+        </div>
+        <p class="specialty">Orthopedic Specialist</p>
+        <p class="availability">Availability: Tuesday</p>
+        <p class="description">Focused on bone, joint, and musculoskeletal care.</p>
+        <button class="book-btn">Book Now</button>
+      </div>
+
+      <div class="doctor-card wednesday">
+        <div class="card-header">
+          <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="Dr. Davis" class="doctor-img">
+          <h3>Dr. Davis</h3>
+        </div>
+        <p class="specialty">Dermatology Consultant</p>
+        <p class="availability">Availability: Wednesday</p>
+        <p class="description">Specializing in skin health and patient-centered treatment.</p>
+        <button class="book-btn">Book Now</button>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="doctor-card thursday">
+        <div class="card-header">
+          <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Dr. Johnson" class="doctor-img">
+          <h3>Dr. Johnson</h3>
+        </div>
+        <p class="specialty">General Practitioner</p>
+        <p class="availability">Availability: Thursday</p>
+        <p class="description">Broad, continuous care for all age groups.</p>
+        <button class="book-btn">Book Now</button>
+      </div>
+
+      <div class="doctor-card friday">
+        <div class="card-header">
+          <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Dr. Lee" class="doctor-img">
+          <h3>Dr. Lee</h3>
+        </div>
+        <p class="specialty">Endocrinology Specialist</p>
+        <p class="availability">Availability: Friday</p>
+        <p class="description">Managing hormonal, metabolic, and chronic conditions.</p>
+        <button class="book-btn">Book Now</button>
+      </div>
+
+      <div class="doctor-card saturday">
+        <div class="card-header">
+          <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Dr. Patel" class="doctor-img">
+          <h3>Dr. Patel</h3>
+        </div>
+        <p class="specialty">Family Medicine Consultant</p>
+        <p class="availability">Availability: Saturday</p>
+        <p class="description">Offering holistic, long-term care for individuals and families.</p>
+        <button class="book-btn">Book Now</button>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="doctor-card sunday">
+        <div class="card-header">
+          <img src="https://randomuser.me/api/portraits/men/78.jpg" alt="Dr. Smith" class="doctor-img">
+          <h3>Dr. Smith</h3>
+        </div>
+        <p class="specialty">Cardiologist</p>
+        <p class="availability">Availability: Sunday</p>
+        <p class="description">Dedicated to heart health, diagnosis, and preventive cardiology.</p>
+        <button class="book-btn">Book Now</button>
+      </div>
+
+      <div class="doctor-card monday">
+        <div class="card-header">
+          <img src="https://randomuser.me/api/portraits/women/77.jpg" alt="Dr. Taylor" class="doctor-img">
+          <h3>Dr. Taylor</h3>
+        </div>
+        <p class="specialty">Obstetrics Consultant</p>
+        <p class="availability">Availability: Monday</p>
+        <p class="description">Supporting women’s reproductive health and prenatal care.</p>
+        <button class="book-btn">Book Now</button>
+      </div>
+
+      <div class="doctor-card tuesday">
+        <div class="card-header">
+          <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Dr. Wilson" class="doctor-img">
+          <h3>Dr. Wilson</h3>
+        </div>
+        <p class="specialty">Neurology Specialist</p>
+        <p class="availability">Availability: Tuesday</p>
+        <p class="description">Focused on brain, nerve, and neurological disorder management.</p>
+        <button class="book-btn">Book Now</button>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <script src="/we-care/scripts/doctors.js"></script>
 
 </body>
 

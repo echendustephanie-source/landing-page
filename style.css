@@ -91,26 +91,6 @@ main {
     min-height: 560vh;
 }
 
-/* .hero-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 75vh;
-    padding-top: 3rem;
-}
-
-.hero-img img {
-    width: 95%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 1rem;
-    filter: brightness(0.7) contrast(1.1);
-} */
-
-
-
-
-
 /* HERO SLIDER CONTAINER */
 .hero-slider {
     position: relative;
